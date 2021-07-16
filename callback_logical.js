@@ -43,5 +43,9 @@ const promiseObj=new Promise((resolve,reject)=>{
 promiseObj.then(
     (message)=>{console.log(message)}
 )
+.catch((err) => {
+    console.log(err)
+})
+
 
 // ####################################################################################################3

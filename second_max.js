@@ -8,21 +8,21 @@ const promiseObj=new Promise((resolve,reject)=>{
             resolve(a)
     }
         else if(b>c){
-            reject(b)
+            resolve(b)
 
     }
         else{
-                reject(c)
+                resolve(c)
     }
     }else{
         if(a>c){
             resolve(a)
     }
         else if(b<c){
-            reject(b)
+            resolve(b)
     }
         else{
-            reject(c)
+            resolve(c)
     }
 }
 })

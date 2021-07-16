@@ -1,5 +1,5 @@
 const promise = new Promise((resolve,reject)=>{
-    var string="pragati"
+    var string="evanjaline"
     var i=0
     var arr=[]
 
@@ -18,6 +18,9 @@ const promise = new Promise((resolve,reject)=>{
 
 promise.then((result)=>{
     console.log("character",result)
+})
+.catch((err) => {
+    console.log(err)
 })
 
 

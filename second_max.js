@@ -1,37 +1,18 @@
-const promiseObj=new Promise((resolve,reject)=>{
-
-    var a=1000
-    var b=20
-    var c=500
-    if (a>b){
-        if (a<c){
-            resolve(a)
+function getSecondLargest(nums) {
+    // Complete the function
+    var max =0
+    var secondmax =0
+    for(var i=0;i<nums.length;i++){
+        if (nums[i]>max){
+            max = nums[i]
+        }
+        for(var j=0;j<nums.length;j++){
+          if (max>nums[j] && secondmax<nums[j]){
+            secondmax = nums[j]
+          }
+        }
     }
-        else if(b>c){
-            resolve(b)
-
-    }
-        else{
-                resolve(c)
-    }
-    }else{
-        if(a>c){
-            resolve(a)
-    }
-        else if(b<c){
-            resolve(b)
-    }
-        else{
-            resolve(c)
-    }
+    
+return(secondmax); 
 }
-})
-promiseObj.then((result) => {
-    console.log(result);
-}).catch((error) => {
-    console.log( error);
-})
-
-
-
-
+console.log(getSecondLargest([2,4,7,8,1,9,66 ]))
